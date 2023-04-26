@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+}
+html{
+    height: 100%;
+}
+.bara{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 8vh;
+    background-color:black;
+    position: fixed;
+    width: 100%; 
+    padding: 1rem 0 0.5rem 0;
+}
+
+.logo a{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 28px;
+    color:bisque;
+    cursor: pointer;
+    outline: none;
+    background-color: inherit;
+    border:none;
+    text-decoration: none;
+}
+
+.logo a:hover{
+    font-size:35px;
+    font-weight: bold;
+}
+.butoane{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    font-size:15px;
+}
+.butoane a{
+    color:bisque;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;  
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+    
+  }
+.dropbtn
+{
+    color:bisque;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size:15px;
+    background-color: black;
+    border: none;
+    outline: none;  
+}
+
+nav a:hover{
+    
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(250, 181, 91);
+}
+
+.butoane li{
+    list-style: none;
+    font-size: 15px;;
+}
+.meniuLogo{
+    display: none;
+    cursor: pointer;
+}
+.meniuLogo div{
+height:3px;
+width: 25px;
+margin: 5px;
+background-color: bisque;
+transition: all 0.3s ease;
+
+}
+
+
+@media screen and (max-width:1024px){
+    .butoane{
+       width: 60%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .butoane{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top:8vh;
+        background-color:black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .butoane li{
+        opacity: 0;
+    }
+    .meniuLogo{
+        display: block;
+    }
+}
+.butoane-active{
+    transform: translateX(0%);
+}
+
+@keyframes butoaneFade{
+    form{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .linie1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .linie2{
+    opacity: 0;
+}
+  
+.toggle .linie3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.pagina{
+   
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 4rem 0;
+    
+    background-image: url("imagini/fundalAdminProfesori.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.optiuni{
+    padding-top: 4rem;
+
+}
+.optiuni a{
+ 
+    font-size: 60px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+}
+.optiuni a:hover{
+    font-size:80px;
+}
+.numeleScolii{
+    font-size: 55px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pep{
+    
+    font-size: 100px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center; 
+    color: black; 
+}
